@@ -5,157 +5,698 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>student port1</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
-  <script src="assets/parallax.js-1.5.0/parallax.js"></script>
-  <script src="assets/javascript/main.js"></script>
+
+
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Permanent+Marker" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Aguafina+Script&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/663a7646c9.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
+
+  <link href="assets/demo.css" rel="stylesheet">
+  <link href="assets/header.css" rel="stylesheet">
+  <title>Document</title>
+
+  <style>
+    /*  Page styles  */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      min-height: 500px;
+      background-color: #1d1d1b;
+      color: #f5f2ed;
+    }
+
+    .skrollr-desktop body {
+      height: 100% !important;
+    }
+
+    #skrollr-body {
+      height: 100%;
+      overflow: visible;
+      position: relative;
+    }
+
+
+    /*  Styles for this example */
+
+
+    .dummy-content {
+      padding: 150px 0;
+      background: radial-gradient(white, transparent);
+      color: #3FA564;
+      font-size: 24px;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .dummy-content h2 {
+      font-weight: normal;
+    }
+
+    .about-us {
+      padding: 150px 0;
+      background-color: transparent;
+      min-height: 120vh;
+      text-align: center;
+      color: #25373C;
+      font-size: 18px;
+    }
+
+    .about-us h2 {
+      font-size: 42px;
+      margin-bottom: 80px;
+      font-weight: normal;
+    }
+
+    .about-us div {
+      text-align: center;
+      width: 25%;
+      margin: 30px 10px;
+      display: inline-block;
+    }
+
+
+    .about-us div img {
+      border-radius: 50%;
+      width: 60%;
+    }
+
+    .about-us a.attribution {
+      display: block;
+      font-size: 13px;
+      text-decoration: none;
+      color: inherit;
+      width: 280px;
+      margin: 50px auto 10px;
+      opacity: 0.5;
+    }
+
+
+    @media (max-width: 800px) {
+
+      .about-us div {
+        width: 45%;
+        margin: 20px 0;
+      }
+
+    }
+
+    .dummy-content {
+      padding: 150px 0;
+      background: radial-gradient(white, rgb(62, 117, 138));
+      color: #3FA564;
+      font-size: 24px;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .dummy-content h2 {
+      font-weight: normal;
+    }
+
+
+    .gallery {
+      background-color: transparent;
+      color: #221f51;
+      font: normal 24px sans-serif;
+      min-height: 300vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .scroll-pause {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      padding-top: 20vh;
+    }
+
+
+    .scroll-pause .row {
+      width: 200vw;
+      height: 30vh;
+      overflow: hidden;
+    }
+
+    .scroll-pause .row div {
+      width: 11.5%;
+      height: 90%;
+      float: left;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      margin: 0.5%;
+      border-radius: 10px;
+    }
+
+    .scroll-pause .row div:first-child {
+      margin-left: 0.4%;
+    }
+
+    .scroll-pause .row div:last-child {
+      margin-right: 0.4%;
+    }
+  </style>
 
 
 </head>
-<header>
-  <section class="header-content">
-
-    <h1 class="header-title">Michael Strickland</h1>
-    <h3 class="header-subtitle">Full Stack Web Developer</h3>
-    <p class="header-button"><a href="#" class="btn1">View Work</a></p>
-  </section>
-</header>
 
 <body>
-  <div id="navbar">
-    <nav class="navbar navbar-expand-lg navbar-light bg-gray">
-      <a class="navbar-brand" href="#">MS</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <div class="page">
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">About<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="portfolio.html">Profile</a>
-          </li>
-
-      </div>
-    </nav>
   </div>
-  <br>
+  <div id="splash">
+    <div class="anim">
+      <div id="loader">
+        <svg version="1.1" width="60px" height="70px" viewBox="0 0 60 70">
+          <defs>
+            <filter id="f1" x="0" y="0">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+            </filter>
+          </defs>
+          <g id="airplane">
+            <path fill="#000" d="M0.677,20.977l4.355,1.631c0.281,0.104,0.579,0.162,0.88,0.16l9.76-0.004L30.46,41.58c0.27,0.34,0.679,0.545,1.112,0.541
+                        h1.87c0.992,0,1.676-0.992,1.322-1.918l-6.643-17.439l6.914,0.002l6.038,6.037c0.265,0.266,0.624,0.412,0.999,0.418l1.013-0.004
+                        c1.004-0.002,1.684-1.012,1.312-1.938l-2.911-7.277l2.912-7.278c0.372-0.928-0.313-1.941-1.313-1.938h1.017
+                        c-0.375,0-0.732,0.15-0.996,0.414l-6.039,6.039h-6.915l6.646-17.443c0.354-0.926-0.33-1.916-1.321-1.914l-1.87-0.004
+                        c-0.439,0.004-0.843,0.203-1.112,0.543L15.677,17.24l-9.765-0.002c-0.3,0.002-0.597,0.055-0.879,0.16L0.678,19.03
+                        C-0.225,19.36-0.228,20.637,0.677,20.977z" transform="translate(44,0) rotate(90 0 0)" />
+          </g>
+          <g id="shadow" transform="scale(.9)">
+            <path fill="#000" fill-opacity="0.3" d="M0.677,20.977l4.355,1.631c0.281,0.104,0.579,0.162,0.88,0.16l9.76-0.004L30.46,41.58c0.27,0.34,0.679,0.545,1.112,0.541
+                            h1.87c0.992,0,1.676-0.992,1.322-1.918l-6.643-17.439l6.914,0.002l6.038,6.037c0.265,0.266,0.624,0.412,0.999,0.418l1.013-0.004
+                            c1.004-0.002,1.684-1.012,1.312-1.938l-2.911-7.277l2.912-7.278c0.372-0.928-0.313-1.941-1.313-1.938h1.017
+                            c-0.375,0-0.732,0.15-0.996,0.414l-6.039,6.039h-6.915l6.646-17.443c0.354-0.926-0.33-1.916-1.321-1.914l-1.87-0.004
+                            c-0.439,0.004-0.843,0.203-1.112,0.543L15.677,17.24l-9.765-0.002c-0.3,0.002-0.597,0.055-0.879,0.16L0.678,19.03
+                            C-0.225,19.36-0.228,20.637,0.677,20.977z" transform="translate(64,30) rotate(90 0 0)"
+              filter="url(#f1)" />
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="header_1">
+    <h1 class="header__logo">
+      <a href="#">
+        <div class="mastercard">
+          <div class="mastercard__part red">M</div>
+          <div class="mastercard__part orange">S</div>
+          <div class="mastercard__copy">
+            <span class="titleHead">Michael Strickland</span>
+          </div>
+        </div>
+      </a>
+    </h1>
+
+    <div class="nav">
+      <a class="nav__item">About</a>
+      <a class="nav__item" href="portfolio/portfolio.html">Portfolio</a>
+      <a class="nav__item" href="#">Contact</a>
+
+    </div>
+  </div>
+  <div class="socialMedia">
+    <h1 class="SM_title">
+      <a class="fab fa-facebook" href="#"></a>
+      <a class="fab fa-instagram" href="#"></a>
+      <a class="fab fa-twitter" href="#"></a>
+    </h1>
+  </div>
+
+  <div class="hero">
+
+    <div class="bio">
+      <!-- <img src="https://cdn.pixabay.com/photo/2018/05/08/08/44/artificial-intelligence-3382507__480.jpg" style="height: 100px; width: 100px" alt="head shot"> -->
+      <!-- <h1 class="bio_content">BIO</h1>
+                   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem fugiat laudantium odit, necessitatibus possimus inventore ut alias provident, sint quod non aut sed voluptatibus cum facilis aliquam eligendi? Molestias, consequuntur?</p> -->
+
+
+    </div>
+
+  </div>
   <hr>
-  <br>
-  <!-- <div class="container"> 
-            <div id="card" style="width: 100%vh; height: 100%wh;">
-                    <img src="assets/images/photo2.jpg" id="img2" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Michael Strickland</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn1">View Work</a>
-                    </div>  -->
-  </div>
-  <section id="content_body">
-    <div class="card">
-      <div class="card__content">
-        <div class="card__front">
-          <h3 class="card__title">Contact Information</h3>
-          <p class="card__subtitle">Click here to see Information</p>
+  <section class="parallax">
+    <div class="frontpage_text">
+      <div id="bg"></div>
+      <div class="container">
+        <div class="head">
+          <div class="head-photo"></div>
+          <div class="top">
+            <div class="card-container">
+              <i class="far fa-hand-point-up hover"></i>
+              <div class="card">
+                <div class="photo"></div>
+                <div class="photo-back">
+                  <a href="#"><i class="fas fa-phone"></i></a>
+                  <a href="#"><i class="fas fa-at"></i></a>
+                  <!-- <a href="#"><i class="fas fa-phone"></i></a> -->
+                  <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
+                </div>
+              </div>
+            </div>
+            <div class="text">
+              <h2>Michael Strickland</h2>
+              <h3>strickland1514@gmail.com</h3>
+            </div>
+          </div>
+          <div class="bottom">
+            <a href="http://linkedin.com/in/michaeladamstrickland"><i class="fas fa-link"></i>Website</a>
+            <a href="#"><i class="fas fa-share-alt-square"></i>Share</a>
+            <a href="#"><i class="fas fa-user-plus"></i>Follow</a>
+            <a href="#"><i class="fas fa-briefcase"></i>Hire</a>
+          </div>
         </div>
-        <div class="card__back">
-          <p class="card__body"> <a href="https://www.linkedin.com/in/michaeladamstrickland" style="width:3px;height:3px;border:0">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJ0AAAB2CAMAAADle2GlAAAAaVBMVEUBerT///8AerQAdbEAeLPD2egAba6OttQAc7H0+ftRkL8zh7tDj78AcK8Aa63U4+6kwtuEq80ifbbj7fQAZqu90+W0y+CDsNFjnscfgbhFiLswgbjs8/g7i716qcxtociau9dkmMRVl8NPiw6rAAADNklEQVR4nO2bi3LqIBCGFVYlWpKYmHiLl/r+D1n01JosRHsCAp3ZHaedkSX+/l8Ju2hHYz0mUzbyHnxmUDLqU3d73H+3H2967v/Uxe1d3OqI7HDv4lZHZMm7EN7FrY7IDvcubnVEdrh3xmCg4j3SrckyLqAoCvUzPrIM0k2dNU1ZrYVw75+dOiY+yntCspYQVh0iweQpaaXkHGIiyzfdnFw6hmvjHXCcdOLReMdkjpPK1K15NmT3jZZ14QHVdUjwuZ5VCxYJWbE2ZHGnaC3UybOelY2c3vMsyArD1AnEQhbf7a5Rub3jWaiDXaJlrYVLcTZkGZ9oWe1KJfBOxj9wUi6dWmdXo0zRZpFxx1WKXY3Cq3ZKueMWFF2TVQtDtqZn4HYbs/VOyROH6lZ/NtlGgJVP7r1TFwC5/zwdP3fS7R42xDujPlXn8Tc1ZdRt+/LOWTD2q6sFIKv6cynF9QeHd5JVy6Eb0D/E7s9P08usrlTU+XGxmj7dXmzUwXaJYn5/KdijkVu3pholOHZLh8ly9KRJt+oYFzjpLL4HAfcczbXwA74u8ZRxMyv4O8jq6mb38g7mqPYrlTq5yAwXVmPzvprVozq5NGq7zeuR55bs7EFWUyeOveK+5QUkuzo9EdfXpnvzznBw0I5mazq/8uVdVuFcFMbzK1/qXkayMNz2fJF9HT/3ygBkX0ey0tHGo2580NHGQ3Z8lhGTNZ2u+VWX1Bu+Wq22a9OGW+7Dkq32UvXjqk0S3HAyOd5BSLJn+dO5MWnY2ObasvCornMFltZawlHba/2RTQ7Q7iEMGeq9BSM7STuT2VRbGfr5mj91J8RNaIfi1TQY2eS2IltbKb9oL5EGI5sVaEXCDs/OUvwK3ryb3D4Fatfne+0NhPOu0v7ktWrZ1jsLdTVWB4VrdRZkc4nOTKDAnXdAstrNzKguFFkP6ogskSWyf0sdkSXvaFVgdUSWyBLZv6WOyBJZIovVkXfDvXul7vxQh4cM6vA5SumULBt9oNjeR/ShBf7uCYMDSjk4/UTg3//MdOLhTO/Ib2a7IPv+oO+Q+fIubnVEdrh3casjsuRdCO/iVkdkh3sXtzoi+9K7L+LxXlaPPHVIAAAAAElFTkSuQmCC"></a>
-            <a href="assets/Resume"><img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAY1BMVEX///8AAACcnJxmZmYjIyNQUFDDw8PR0dHr6+uDg4M0NDRUVFTy8vLg4OBXV1fNzc1GRkZ8fHz5+fmzs7O6urra2tpeXl6mpqYNDQ2Ojo5ycnIrKytra2sTExM6OjqWlpYcHBwLHwj6AAAC0klEQVR4nO2a7ZaCIBBAHW1Ty0+0zNL0/Z9yIYFjrZYK6Dnt3B97JFOuOgyDrWUhCIIgCIIgCIJMILeVKIha994NFLm4SgIOwEEJgESlf7KDKvAUCBq4nBQEgh3YKhdgWXsAlWcwIODm+5BvkvErNyaQ3Wlc1c6jA+/e7sZoRfBrFmh4aNfsJrjvgl88eL0COR1VhRtfAW7sCvfZKLk4RKtAcIdbwDYymBybWgVCgKzbSiDaQoCejId3CQm9FUU6SmFEIAbgI9CHhLDmykHoAfjdxwAV/RuNDsM2MTMMqy4IvDNAzNpkFHmIXgF6CyDyr3SGuU49g95h6NfiESfZBgLPmc9ZXYBmAUhPjyccsCmhWlvgKNMQhdA43K8rQG9A2dtDa7XzugKlTIOyHawqkL6kf1emxZUEfGiPUY9kbYG/5cdxSsmvcRTEV6fq4ZSTlhxaBEixvLJWFWiZgM3nnu6jcBA5IrqmHDCKApZziR91gDTwDsPz/4F3afMFmRBSFejoGYRjFQgfEtVzU5NA3+CUDyKihHRN2akmAXaeXhzMO1CLwGKDpQJ/Cl4/4ZXmSCksyuCwa8p5a6HAyKorpSEwFoQ8CH54U/S6UIBcf16I2KsSWgGQ9HVPR8rz4r5ryql6cQy8VrmnFqAY2vNaBltaq2JJeBH9z0STAHvyU+tgEwIs/S26fnWB5hwq3H91gaBms2G5vH899UCQ5p+/alJABY0ChTOD1IDAWA4eRjEVDwk0wzl4GLl8/6YY2FyADJfDH4rkzYJQ1OUaBS5bC3juDOS69ZuCcHOBJpmBiUQ0bxQYeFfcPL0gec8RU7EJAS+egYk8sHkmnDcKDAiQ0wxMzIbL+CYBe+uacF4QGqiKi/OMdYEvjvqmGEABFPifAmQH6edvvaNQfEkVARxViGo4KP07W1h/zrofWP5+6UFg+0qUU35cRBAEQRAEQRDk//ILlnVMDMMNOZQAAAAASUVORK5CYII='></a>
-            Contact information goes here..........</p>
-
+        <div class="right">
+          <a id="active" href="#content"><i class="fas fa-user-graduate"></i>Profile</a>
+          <a href="#projects"><i class="fas fa-th-large"></i>Projects</a>
+          <a href="#accordion"><i class="fas fa-chart-pie"></i>Skills</a>
         </div>
       </div>
-    </div>
-    <div class="bodyOfWork">
-      <article id="one" data-color="#4D1123">
-        <h1>Hangman</h1>
-        <p><a href="projects/word-guess-game/hangman-game/index.html" style="width:42px;height:42px;border:0">
-            <img src="assets/images/Hangman.jpg" alt="RPG Game">
-          </a>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consequat pretium odio ac vulputate.
-          Nullam vitae diam id erat interdum dignissim. Nam eget faucibus metus. Pellentesque vitae nibh non mi ultrices
-          rhoncus. Aliquam vestibulum ut massa vitae congue. Aliquam mauris neque, eleifend sit amet elit ut, placerat
-          iaculis velit. Suspendisse potenti. Cras interdum interdum porttitor. Aenean ac enim vitae metus fringilla
-          malesuada. Duis pharetra enim nulla, non eleifend ante lobortis ac. Duis quis purus lorem. Sed mattis massa ac
-          nisl faucibus sagittis. Ut posuere velit massa, et malesuada elit condimentum ut. Integer lacinia risus ut
-          ante cursus, sed porttitor nisl suscipit. Aliquam non ultricies massa. Donec vehicula sem at nisl lacinia
-          ultrices.</p>
-        <div class="clear"></div>
-      </article>
-    </div>
-    <article id="two" data-color="#3F114D">
-      <h1>WordGuess</h1>
-      <p> <a href="assets/projects/TriviaGame/index.html" style="width:42px;height:42px;border:0">
-          <img src="assets/images/wordGuess.jpg" alt="Trivia Game">
-        </a>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consequat pretium odio ac vulputate.
-        Nullam vitae diam id erat interdum dignissim. Nam eget faucibus metus. Pellentesque vitae nibh non mi ultrices
-        rhoncus. Aliquam vestibulum ut massa vitae congue. Aliquam mauris neque, eleifend sit amet elit ut, placerat
-        iaculis velit. Suspendisse potenti. Cras interdum interdum porttitor. Aenean ac enim vitae metus fringilla
-        malesuada. Duis pharetra enim nulla, non eleifend ante lobortis ac. Duis quis purus lorem. Sed mattis massa ac
-        nisl faucibus sagittis. Ut posuere velit massa, et malesuada elit condimentum ut. Integer lacinia risus ut ante
-        cursus, sed porttitor nisl suscipit. Aliquam non ultricies massa. Donec vehicula sem at nisl lacinia ultrices.
-      </p>
-      <div class="clear"></div>
-    </article>
 
-    <article id="three" data-color="#4A3232">
-      <h1>Giftastic</h1>
-      <p> <a href="projects/GifTastic/index.html" style="width:42px;height:42px;border:0">
-          <img src="assets/images/giftastic.jpg" alt="Rutgers Info Widget">
-        </a>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consequat pretium odio ac vulputate.
-        Nullam vitae diam id erat interdum dignissim. Nam eget faucibus metus. Pellentesque vitae nibh non mi ultrices
-        rhoncus. Aliquam vestibulum ut massa vitae congue. Aliquam mauris neque, eleifend sit amet elit ut, placerat
-        iaculis velit. Suspendisse potenti. Cras interdum interdum porttitor. Aenean ac enim vitae metus fringilla
-        malesuada. Duis pharetra enim nulla, non eleifend ante lobortis ac. Duis quis purus lorem. Sed mattis massa ac
-        nisl faucibus sagittis. Ut posuere velit massa, et malesuada elit condimentum ut. Integer lacinia risus ut ante
-        cursus, sed porttitor nisl suscipit. Aliquam non ultricies massa. Donec vehicula sem at nisl lacinia ultrices.
-      </p>
-      <div class="clear"></div>
-    </article>
 
-    <article id="four" data-color="#506C6C">
-      <h1>Rock Paper Scissors</h1>
-      <p> <img src="assets/images/rps.jpg" alt="Rock Paper Scissors">Lorem ipsum dolor sit amet, consectetur adipiscing
-        elit. Praesent consequat pretium odio ac vulputate. Nullam vitae diam id erat interdum dignissim. Nam eget
-        faucibus metus. Pellentesque vitae nibh non mi ultrices rhoncus. Aliquam vestibulum ut massa vitae congue.
-        Aliquam mauris neque, eleifend sit amet elit ut, placerat iaculis velit. Suspendisse potenti. Cras interdum
-        interdum porttitor. Aenean ac enim vitae metus fringilla malesuada. Duis pharetra enim nulla, non eleifend ante
-        lobortis ac. Duis quis purus lorem. Sed mattis massa ac nisl faucibus sagittis. Ut posuere velit massa, et
-        malesuada elit condimentum ut. Integer lacinia risus ut ante cursus, sed porttitor nisl suscipit. Aliquam non
-        ultricies massa. Donec vehicula sem at nisl lacinia ultrices.</p>
-      <div class="clear"></div>
-    </article>
-
-    <article id="five" data-color="#4B7384">
-      <h1>The Office Fan Page</h1>
-      <p> <a href="projects/The-office/index.html" style="width:42px;height:42px;border:0">
-          <img src="assets/images/TheOffice.jpg" alt="Rutgers Info Widget"></a> ipsum dolor sit amet, consectetur
-        adipiscing elit. Praesent consequat pretium odio ac vulputate. Nullam vitae diam id erat interdum dignissim. Nam
-        eget faucibus metus. Pellentesque vitae nibh non mi ultrices rhoncus. Aliquam vestibulum ut massa vitae congue.
-        Aliquam mauris neque, eleifend sit amet elit ut, placerat iaculis velit. Suspendisse potenti. Cras interdum
-        interdum porttitor. Aenean ac enim vitae metus fringilla malesuada. Duis pharetra enim nulla, non eleifend ante
-        lobortis ac. Duis quis purus lorem. Sed mattis massa ac nisl faucibus sagittis. Ut posuere velit massa, et
-        malesuada elit condimentum ut. Integer lacinia risus ut ante cursus, sed porttitor nisl suscipit. Aliquam non
-        ultricies massa. Donec vehicula sem at nisl lacinia ultrices.</p>
-      <div class="clear"></div>
-    </article>
 
     </div>
-
-    <div class="fade-bg">
 
     </div>
   </section>
+  <section id="content">
+    <div class="body-text">
+      
+      <h2><img src="assets/images/photo2.jpg" alt="head shot" style="height: 200px; width: 240px"></h2>
+      <h2>Bio</h2>
+
+
+      <p data-300-center-top="transform: scale(0.8); opacity: 0"
+        data-300-center-center="transform: scale(1); opacity: 1">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida in odio vel tincidunt. Fusce quis lectus
+        accumsan, accumsan nibh sed, aliquet purus. In vitae velit eu est cursus malesuada sed ut nibh. Curabitur a leo
+        enim.
+      </p>
+
+
+      <p data-200-center-top="transform: scale(0.8); opacity: 0"
+        data-200-center-center="transform: scale(1); opacity: 1">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida in odio vel tincidunt. Fusce quis lectus
+        accumsan, accumsan nibh sed, aliquet purus. In vitae velit eu est cursus malesuada sed ut nibh. Curabitur a leo
+        enim.
+      </p>
+
+      <p data-100-center-top="transform: scale(0.8); opacity: 0"
+        data-100-center-center="transform: scale(1); opacity: 1">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida in odio vel tincidunt. Fusce quis lectus
+        accumsan, accumsan nibh sed, aliquet purus. In vitae velit eu est cursus malesuada sed ut nibh. Curabitur a leo
+        enim.
+      </p>
+
+    </div>
+  </section>
+  <section class="parallax "></section>
+  </div>
+  </section>
+
+
+  <!-- bio content -->
+  <!-- <div class="body-text">
+
+    <h2>Bio</h2>
+
+    <p data-300-center-top="transform: scale(0.8); opacity: 0" data-300-center-center="transform: scale(1); opacity: 1">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida in odio vel tincidunt. Fusce quis lectus
+      accumsan, accumsan nibh sed, aliquet purus. In vitae velit eu est cursus malesuada sed ut nibh. Curabitur a leo
+      enim.
+    </p>
+
+
+    <p data-200-center-top="transform: scale(0.8); opacity: 0" data-200-center-center="transform: scale(1); opacity: 1">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida in odio vel tincidunt. Fusce quis lectus
+      accumsan, accumsan nibh sed, aliquet purus. In vitae velit eu est cursus malesuada sed ut nibh. Curabitur a leo
+      enim.
+    </p>
+
+    <p data-100-center-top="transform: scale(0.8); opacity: 0" data-100-center-center="transform: scale(1); opacity: 1">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida in odio vel tincidunt. Fusce quis lectus
+      accumsan, accumsan nibh sed, aliquet purus. In vitae velit eu est cursus malesuada sed ut nibh. Curabitur a leo
+      enim.
+    </p>
+
+  </div>
+
+  </div> -->
+  <!-- end bio -->
+
+  <hr>
+  <div id="projects">
+    <h1>Projects</h1>
+    <div id="accordion">
+      <ul>
+        <li tabindex="1">
+          <div>
+            <a href="projects/word-guess-game/hangman-game/index.html">
+              <h2>Word Guess</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </a>
+          </div>
+        </li>
+        <li tabindex="2">
+          <div>
+            <a href="#">
+              <h2>Lorem Ipsum</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </a>
+          </div>
+        </li>
+        <li tabindex="3">
+          <div>
+            <a href="#">
+              <h2>Lorem Ipsum</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </a>
+          </div>
+        </li>
+        <li tabindex="4">
+          <div>
+            <a href="#">
+              <h2>Lorem Ipsum</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </a>
+          </div>
+        </li>
+        <li tabindex="5">
+          <div>
+            <a href="#">
+              <h2>Lorem Ipsum</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </a>
+          </div>
+        </li>
+        <li tabindex="6">
+          <div>
+            <a href="#">
+              <h2>Lorem Ipsum</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+
+  <section class="parallax">
+    <!-- <div class="frontpage_text">
+      <img src="images/" alt="" srcset="">
+    </div>
+  </section>
+  <section id="content">
+    <div class="body-text">
+
+      <h2>Bio</h2>
+
+      <p data-300-center-top="transform: scale(0.8); opacity: 0"
+        data-300-center-center="transform: scale(1); opacity: 1">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida in odio vel tincidunt. Fusce quis lectus
+        accumsan, accumsan nibh sed, aliquet purus. In vitae velit eu est cursus malesuada sed ut nibh. Curabitur a leo
+        enim.
+      </p>
+
+
+      <p data-200-center-top="transform: scale(0.8); opacity: 0"
+        data-200-center-center="transform: scale(1); opacity: 1">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida in odio vel tincidunt. Fusce quis lectus
+        accumsan, accumsan nibh sed, aliquet purus. In vitae velit eu est cursus malesuada sed ut nibh. Curabitur a leo
+        enim.
+      </p>
+
+      <p data-100-center-top="transform: scale(0.8); opacity: 0"
+        data-100-center-center="transform: scale(1); opacity: 1">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida in odio vel tincidunt. Fusce quis lectus
+        accumsan, accumsan nibh sed, aliquet purus. In vitae velit eu est cursus malesuada sed ut nibh. Curabitur a leo
+        enim.
+      </p>
+
+    </div>
+  </section> -->
+  <section class="parallax "></section>
+  </div>
+  </section>
+  <!-- ================================================= -->
+
+
+
+  <div class="features-list">
+
+    <h2>Features</h2>
+
+    <div data-100-bottom-top="transform: translateX(-200px); opacity: 0"
+      data-center-top="transform: translateX(0px); opacity: 1">
+      <a href="http://linkedin.com/in/michaeladamstrickland"><i class="fab fa-linkedin" ></i></a>
+     <h4>Linked<b>In</b></h4>
+    </div>
+
+    <div data-100-bottom-top="transform: translateY(200px); opacity: 0"
+      data-center-top="transform: translateY(0px); opacity: 1">
+      <i class="fab fa-github" href="#"></i></i>
+      <h4>Git<b>Hub</b></h4>
+    </div>
+
+    <div data-100-bottom-top="transform: translateX(200px); opacity: 0"
+      data-center-top="transform: translateX(0px); opacity: 1">
+      <i class="far fa-file" href="#"></i>
+      <h4>Resume</b></h4>
+    </div>
+
+  </div>
+
+  <hr>
+  <div class="about-us">
+
+    <h2>Skills/ Languages</h2>
+
+    <div data-150-bottom-center="transform: rotate(-90deg); opacity: 0"
+      data-150-center-center="transform: rotate(0); opacity: 1">
+      <img src="https://image.flaticon.com/icons/svg/174/174854.svg" alt="avatar">
+    </div>
+
+    <div data-100-bottom-center="transform: rotate(-90deg); opacity: 0"
+      data-100-center-center="transform: rotate(0); opacity: 1">
+      <img src="https://www.flaticon.com/premium-icon/icons/svg/1183/1183672.svg" alt="avatar">
+    </div>
+
+    <div data-50-bottom-center="transform: rotate(-90deg); opacity: 0"
+      data-50-center-center="transform: rotate(0); opacity: 1">
+      <img src="https://image.flaticon.com/icons/svg/919/919828.svg" alt="avatar">
+    </div>
+
+    <div data-150-bottom-center="transform: rotateY(-90deg); opacity: 0"
+      data-150-center-center="transform: rotate(0); opacity: 1">
+      <img src="https://image.flaticon.com/icons/svg/919/919825.svg" alt="avatar">
+    </div>
+
+    <div data-100-bottom-center="transform: rotateY(-90deg); opacity: 0"
+      data-100-center-center="transform: rotate(0); opacity: 1">
+      <img src="https://image.flaticon.com/icons/svg/919/919836.svg" alt="avatar">
+    </div>
+
+    <div data-50-bottom-center="transform: rotateY(-90deg); opacity: 0"
+      data-50-center-center="transform: rotate(0); opacity: 1">
+      <img src="https://image.flaticon.com/icons/svg/888/888847.svg" alt="avatar">
+    </div>
+
+    <div data-150-bottom-center="transform: rotateY(-90deg); opacity: 0"
+      data-150-center-center="transform: rotate(0); opacity: 1">
+      <img src="https://image.flaticon.com/icons/svg/919/919825.svg" alt="avatar">
+    </div>
+
+    <div data-100-bottom-center="transform: rotateY(-90deg); opacity: 0"
+      data-100-center-center="transform: rotate(0); opacity: 1">
+      <img src="https://image.flaticon.com/icons/svg/919/919836.svg" alt="avatar">
+    </div>
+
+    <div data-50-bottom-center="transform: rotateY(-90deg); opacity: 0"
+      data-50-center-center="transform: rotate(0); opacity: 1">
+      <img src="https://image.flaticon.com/icons/svg/888/888847.svg" alt="avatar">
+    </div>
+
+
+
+
+  </div>
+  <hr>
+  <!-- <h1>Animated Graphs</h1> 
+<h2>Scroll Triggered, Responsive, Data-driven</h2>  
+<p>&nbsp;</p> 
+
+<div class="chartBarsWrap">
+    <div class="chartBars chartBars1">
+        <ul class="numbers">
+            <li><span>100%</span></li>
+            <li><span>80%</span></li>
+            <li><span>60%</span></li>
+            <li><span>40%</span></li>
+            <li><span>20%</span></li>
+            <li><span>0%</span></li>
+        </ul>
+        <ul class="bars">
+            <li>
+                <span class="tooltip"> 
+                <span class="tooltipContent">Very important info that you should read!</span>
+                <div data-percentage="52" class="bar greenBar trigger"></div>
+                </span>
+                <b>Alpha</b>
+            </li>
+            <li>
+                <span class="tooltip">  
+                <span class="tooltipContent">This one is trending well.</span>
+                <div data-percentage="83" class="bar blueBar trigger"></div>
+                </span> 
+                <b>Beta</b> 
+            </li>
+            <li>
+                <span class="tooltip"> 
+                <span class="tooltipContent">I like cheese!</span>
+                <div data-percentage="94" class="bar orangeBar trigger"></div>
+                </span>
+                <b>Gamma</b>
+            </li>
+            <li>
+                <span class="tooltip"> 
+                <span class="tooltipContent">Monkey's are funny!</span> 
+                <div data-percentage="64" class="bar purpleBar trigger"></div>    
+                </span>
+                <b>Delta</b>   
+            </li>
+        </ul>
+    </div>
+</div>
+
+<p>Bacon ipsum do lor amet porchetta jowl jerky short loin, tri-tip flank c ow. Strip steak meat ball picanha t-bone pork loin filet mignon, pancetta jerky kielba sa sirloin ball t ip hamburger turkey pork belly ham hock. Chicken swine tail s pa re ribs,pork loin tongue picanha strip steak ribeye pancetta bresaola landjaeger flank ham shank. Picanha t-bone meatball, corned beef tail tri-tip flank capicola alcatra spare ribs. Flank tail pork loin pork belly sirloin tri-tip.</p>
+
+<h3>Responsive? Yep.</h3>
+
+<div class="chartBarsWrap"> -->
+  <!-- <div class="chartBars chartBars2"> 
+        <ul class="numbers">
+            <li><span>100%</span></li>
+            <li><span>80%</span></li>
+            <li><span>60%</span></li>
+            <li><span>40%</span></li>   
+            <li><span>20%</span></li> 
+            <li><span>0%</span></li>
+        </ul>
+        <ul class="bars">
+            <li>
+                <div data-percentage="92" class="bar greenBar trigger"></div><b>Alpha</b></li><li> 
+    <div data-percentage="33" class="bar orangeBar trigger"></div><b>Beta</b></li>
+<li>
+    <div data-percentage="64" class="bar blueBar trigger"></div><b>Gamma</b></li>
+<li>
+    <div data-percentage="44" class="bar purpleBar trigger"></div>
+    <b>Delta</b></li>
+        </ul>
+    </div>
+</div> -->
+
+  <!-- <p>Bacon ipsum do lor amet porchetta jowl jerky short loin, tri-tip flank c ow. Strip steak meat ball picanha t-bone pork loin filet mignon, pancetta jerky kielba sa sirloin ball t ip hamburger turkey pork belly ham hock. Chicken swine tail s pa re ribs, pork loin tongue picanha strip steak ribeye pancetta bresaola landjaeger flank ham shank. Picanha t-bone meatball, corned beef tail tri-tip flank capicola alcatra spare ribs. Flank tail pork loin pork belly sirloin tri-tip. Bresaola salmi.</p>
+
+<h3>Radial Graphs</h3>   
+ 
+<div class="box-piesite">
+    <ul>
+        <li class="design">
+            <div class="piesite" id="pie_0" data-pie="82"></div>
+        </li>
+        <li class="usability">
+            <div class="piesite" id="pie_2" data-pie="55"></div>
+        </li>
+        <li class="creativity">
+            <div class="piesite" id="pie_1" data-pie="33"></div>
+        </li>
+    </ul>
+</div>
+
+<p>Bacon ipsum do lor amet porchetta jowl jerky short loin, tri-tip flank c ow. Strip steak meat ball picanha t-bone pork loin filet mignon, pancetta jerky kielba sa sirloin ball t ip hamburger turkey pork belly ham hock. Chicken swine tail s pa re ribs,pork loin tongue picanha strip steak ribeye pancetta bresaola landjaeger flank ham shank. Picanha t-bone meatball, corned beef tail tri-tip flank capicola alcatra spare ribs. Flank tail pork loin pork belly sirloin tri-tip..</p> -->
+  <!-- <p>&nbsp;</p>  -->
+
+  <!-- <h3>Horizontal</h3>   
+ 
+<div class="chartBarsWrap chartBarsHorizontal"> 
+    <div class="chartBars"> 
+        <ul class="bars">  
+            <li> 
+                <div data-percentage="92" class="bar greenBarFlat"></div><b>Alpha</b></li>
+            <li>
+                <div data-percentage="33" class="bar orangeBarFlat"></div><b>Beta</b></li>
+            <li>
+                <div data-percentage="64" class="bar blueBarFlat"></div><b>Gamma</b></li>
+            <li>
+                <div data-percentage="44" class="bar purpleBarFlat"></div><b>Delta</b></li>
+        </ul>
+    </div>
+</div>
+ -->
+
+  <!-- <p>Bacon ipsum do lor amet porchetta jowl jerky short loin, tri-tip flank c ow. Strip steak meat ball picanha t-bone pork loin filet mignon, pancetta jerky kielba sa sirloin ball t ip hamburger turkey pork belly ham hock. Chicken swine tail s pa re ribs,pork loin tongue picanha strip steak ribeye pancetta bresaola landjaeger flank ham shank.</p> 
+
+<h3>Just add more bars, they sqeeze in. Sweet!</h3>
+
+<div class="chartBarsWrap">
+    <div class="chartBars chartBars3">
+        <ul class="numbers">
+            <li><span>100%</span></li>
+            <li><span>80%</span></li>
+            <li><span>60%</span></li>
+            <li><span>40%</span></li>
+            <li><span>20%</span></li>
+            <li><span>0%</span></li>
+        </ul>
+        <ul class="bars">
+            <li><div data-percentage="92" class="bar greenBar trigger"></div><b>Alpha</b></li>
+            <li><div data-percentage="33" class="bar blueBar trigger"></div><b>Beta</b></li>
+            <li><div data-percentage="64" class="bar orangeBar trigger"></div><b>Gamma</b></li>
+            <li><div data-percentage="41" class="bar purpleBar trigger"></div><b>Delta</b></li>
+            <li><div data-percentage="52" class="bar greenBar trigger"></div><b>Epsilon</b></li> 
+            <li><div data-percentage="58" class="bar blueBar trigger"></div><b>Zeta</b></li>
+            <li><div data-percentage="65" class="bar orangeBar trigger"></div><b>Eta</b></li>
+            <li><div data-percentage="91" class="bar purpleBar trigger"></div><b>Theta</b></li>
+            <li><div data-percentage="32" class="bar greenBar trigger"></div><b>Iota</b></li>    
+            <li><div data-percentage="68" class="bar blueBar trigger"></div><b>Kappa</b></li>
+        </ul>
+    </div>
+</div>
+
+<p>Bacon ipsum do lor amet porchetta jowl jerky short loin, tri-tip flank c ow. Strip steak meat ball picanha t-bone pork loin filet mignon, pancetta jerky kielba sa sirloin ball t ip hamburger turkey pork belly ham hock. Chicken swine tail s pa re ribs,pork loin tongue picanha strip steak ribeye pancetta bresaola landjaeger flank ham shank.</p>
+ -->
+  </div>
+  <script src="assets/skrollr.min.js"></script>
+
+  <script>
+    skrollr.init();
+  </script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <!-- <script src="http://cdn.tutorialzine.com/misc/enhance/v3.js" async></script> -->
+
+  <script>
+    skrollr.init();
+  </script>
 
 </body>
 
