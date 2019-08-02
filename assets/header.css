@@ -526,7 +526,7 @@ header{
 
 
 header h1{
-    float: left;
+    float: none;
     font: normal 24px/1.5 'Open Sans', sans-serif;
     color: #fff;
 }
@@ -589,7 +589,7 @@ ul li{
 
 
     header h1{
-        float: none;
+        float: right;
     }
 
     header a{
@@ -673,6 +673,7 @@ ul li{
   h2,
   h3 {
     text-align: center;
+    
   }
   h1 {
     margin: 100px auto 0;
